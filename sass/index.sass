@@ -9,10 +9,22 @@
     align-items: center
     padding: 20px
     margin: 0 auto
-    max-width: 750px
+    max-width: 800px
 
 .tab-content
     padding: 10px
+
+.bg-left
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: none
+    @media (min-width: 700px)
+        display: block
+        z-index: -1
+
 
 @media (min-width: 700px)
     .content
@@ -20,15 +32,17 @@
         padding-top: 100px
 
         .content-box:nth-child(2)
+            position: relative
             padding: 10px
             padding-bottom: 0
             margin-left: 20px
             display: flex
             flex-direction: column-reverse
             width: 30%
-            background-color: rgba(0, 0, 0, .8)
             border-radius: 10px
             align-self: flex-end
+
+
 
 
 .content-box
@@ -83,6 +97,7 @@
             text-align: right
             font-size: 1.2rem
             font-weight: bold
+            font-family: "party"
             padding: 5px
             outline: 2px solid #7e7395
             border: 1px solid #fff
@@ -124,6 +139,17 @@
             span
                 font-family: '8bit'
 
+    @media (min-width: 700px)
+        .spend-box-right
+            margin-right: 20px
+
+    .chickens-counter
+        font-size: 0.8rem
+        text-align: center
+        text-transform: uppercase
+        span 
+            font-weight: bold
+
 
 .separator
     display: flex
@@ -142,6 +168,7 @@
         padding: 50px 20px
 
     .bees-tally-container
+        margin: 20px 0
         @media (min-width: 700px)
             display: flex
             padding: 0 20px
@@ -162,15 +189,23 @@
         font-family: "8bit"
         margin-bottom: 10px
 
+        & + p 
+            text-align: center
+            text-transform: uppercase
+            font-size: 0.7rem
+            @media (min-width: 700px)
+                text-align: left
+
     .number-container
         position: relative
         display: flex
         justify-content: center
         align-items: center
         padding: 10px
-        margin: 0 auto
         margin-bottom: 10px
         max-width: 300px
+        @media (min-width: 700px)
+            margin-left: 10px
 
         img 
             position: absolute
@@ -180,7 +215,7 @@
             height: 100%
             z-index: 1
 
-        .num-miners, #sell-price
+        span
             font-size: 1.5rem
             font-family: "party"
             color: #eff12c
@@ -191,7 +226,7 @@
             font-family: "8bit"
             font-size: 1rem
             margin-bottom: 10px
-        text-align: center
+            text-align: center
 
 
 
@@ -252,6 +287,7 @@
         text-transform: uppercase
         font-size: 0.8rem
         margin-bottom: 5px
+        font-family: "8bit"
 
     span 
         font-weight: normal
@@ -268,6 +304,9 @@
         background-repeat: no-repeat
         width: 80%
         height: 10px
+        @media (min-width: 700px)
+            background-image: url('../images/franja-desktop.png')
+
 
 .referals
     margin: 40px 0
@@ -340,9 +379,13 @@
 
 
 footer
-    padding: 10px 30px
-    background-color: rgba(0, 0, 0, .8)
+    position: relative
+    padding: 50px 50px
     border-radius: 10px
+
+    .bg-left
+        display: block
+        z-index: -1
 
     @media (min-width: 700px)
         .instruction
@@ -351,7 +394,7 @@ footer
 
     .instruction
         margin: 20px 0
-        text-align: center
+        text-align: left
         .title
             font-weight: bold
             text-transform: uppercase

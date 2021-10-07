@@ -120,7 +120,7 @@ function refreshData() {
   contractBalance(function (result) {
     balance = +result;
     rawStr = numberWithCommas(Number(result).toFixed(3));
-    const tokenBal = stripDecimals(rawStr, 3) + " CAKE";
+    const tokenBal = stripDecimals(rawStr, 3);
 
     if (+price > 0 && +balance > 0) {
       dollarBal = stripDecimals(
@@ -138,7 +138,7 @@ function refreshData() {
   var userBalanceElem = document.getElementById("user-balance");
   userBalance(function (result) {
     rawStr = numberWithCommas(Number(result).toFixed(3));
-    userBalanceElem.textContent = stripDecimals(rawStr, 3) + " CAKE";
+    userBalanceElem.textContent = stripDecimals(rawStr, 3);
   });
 
   lastHatch(currentAddr, function (lh) {

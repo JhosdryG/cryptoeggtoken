@@ -64,7 +64,7 @@
 						  <img src="images/bg-spend-mobile.png" alt="prductionbg" class="purple-box-bg">
 	  
 						  <div class="spend-input-continer">
-							  <div>
+							  <div class="spend-box-right">
   
 								  <label for="approve">
 									  <p class="step">1. Enter bnb</p>
@@ -122,10 +122,16 @@
 										role="button"
 										>
 										<span>
-											Hire <span id="eggs-to-buy-2">?</span> chikens
+											Hire chikens
 										</span>
 										</button>
 									</div>
+									<p class="chickens-counter">
+										hire
+										<span id="eggs-to-buy-2">?</span> 
+										chickens
+									</p>
+									
 							  </div>
 						  </div>
 	  
@@ -144,18 +150,36 @@
 						<img src="images/bg-purple-box-mobile.png" alt="prductionbg" class="purple-box-bg">
 	  
 					  <div class="bees-tally-container">
-						  <h2 class="tally-text">
-							  chicken miners
-						  </h2>
+						  <div>
+							  <h2 class="tally-text">
+								  chicken miners
+							  </h2>
+						  </div>
 						  <div class="number-container">
 							  <img src="images/bg-number.png" alt="bgnumber">
 							  <span class="num-miners">0</span>
 						  </div>
 					  </div>
+
+					  <div class="bees-tally-container">
+						  <div>
+							  <h2 class="tally-text">
+								  production
+							  </h2>
+							  <p>feet per hour</p>
+						  </div>
+						  <div class="number-container">
+							  <img src="images/bg-number.png" alt="bgnumber">
+							  <span id="production-rate">0</span>
+						  </div>
+					  </div>
 	  
 						<div class="custom-row">
 						  <div class="dm-container-right bees-tally-container">
-							<h2 class="tally-text">mined eggs</h2>
+							  <div>
+								  <h2 class="tally-text">mined eggs</h2>
+								  <p><span id="until-full">?</span> until full</p>
+							  </div>
   
 							<div class="number-container">
 							  <img src="images/bg-number.png" alt="bgnumber">
@@ -164,19 +188,13 @@
 						  </div>
 						</div>
 	  
-					  <div class="custom-row">
-						<div class="dm-container-right number-data">
-						  <h2>Production</h2>
-						  <p><span id="production-rate">0</span> feet per hour</p>
-						  <p><span id="until-full">?</span> until full</p>
-						</div>
-					  </div>
 	  
 					</div>
 				  </div>
   
   
 				  <div class="content-box">
+					  <img src="images/bg-left.png" alt="bg-left" class="bg-left">
 					  <div class="other-button-container">
 						  <img src="images/chickens.png" alt="chickens" class="buttons-chickens">
 						  <div class="button-container green">
@@ -202,8 +220,8 @@
   
 						<div class="info-box">
 						  <div class="altcolor contract">
-							  <p>Contract balance : <span id="contract-balance">45.35</span> bnb</p>
-							  <p>Your balance : <span id="user-balance">0.5486</span> bnb</p>
+							  <p>Contract balance : <br/><span><span id="contract-balance">0</span> bnb</span></p>
+							  <p>Your balance : <br/><span><span id="user-balance">0.5486</span> bnb</span> </p>
 						  </div>
   
 						  <div class="referals">
@@ -238,6 +256,8 @@
 			  </div>
   
 			  <footer class="footer">
+				<img src="images/bg-left.png" alt="bg-left" class="bg-left">
+
 				  <div class="instruction">
 					  <p class="title">
 						  Yield Production Instructions

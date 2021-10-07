@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+
+<html>
+<style>
+
+	.matic-text {
+    color: var(--font-color);
+    margin-left: 10px;
+    font-size: 1.5em;
+    position: relative;
+    top: 3px;
+    font-weight: bold;
+  }
+	.your-miners {
+    font-size: 1.2em;
+	}
+	.form-control {
+   width: 100px;
+	 padding-left: 8px;
+	 padding-right: 3px;
+	 padding-top: 5px;
+	 padding-bottom: 5px;
+	 font-size: 1.1em;
+	 font-weight: bold;
+	}
+
+	#ref-link {
+		font-size:0.8em;
+	}
+
+
+</style>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="Hire Miners to earn Fantom" name="description">
+		<meta name="image" content="images/overview1.png">
+			<!-- opengraph image -->
+		<meta property="og:image" content="images/overview1.png">
+		<meta property="og:title" content="Fantom Miner">
+		<meta property="og:type" content="website"/>
+		<meta property="og:description" content="Hire Miners to earn Fantom">
+		<meta property="og:url" content="index.html">
+		<!-- Twitter meta -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="index.html">
+		<meta name="twitter:title" content="Fantom Miner">
+		<meta name="twitter:description" content="Hire Miners to earn Fantom">
+		<meta name="twitter:image" content="images/overview1.png">
+		<title>Fantom Miner</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main_2.css" />
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+			<div style="display: flex; justify-content: flex-end">
+		  <div class="theme-switch-wrapper">
+			<label class="theme-switch" for="checkbox">
+							<input type="checkbox" id="checkbox" />
+							<div class="slider round"></div>
+			</label>
+			</div>
+			</div>
+
+					<!-- Logo -->
+						<h1 style="font-size:3em"><img src="images/polygonscan_1.png" height="20px"/><a href="index.html">Fantom Miner</a></h1>
+						<h2 style="font-size:1.5em;padding-top:10px"><a id="tg" class="icon brands fa-telegram" href="https://t.me/multi_chain_miner" target="_blank"></a><span style="padding-left:5px"></span>The never-ending investment</span></span></h2>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="https://t.me/multi_chain_miner" target="_blank">Telegram Community</a></li>
+								<li><a href="https://discord.gg/GWzz6mCN" target="_blank">Discord Community</a></li>
+								<li><a href="https://ftmscan.com/address/0x69e7d335e8da617e692d7379e03fef74ef295899" target="_blank">Verified Contract</a></li>
+								<li><a href="https://matic-miner.finance" target="_blank">MATIC MINER</a></li>
+								<li><a href="https://avax-miner.finance" target="_blank">AVAX MINER</a></li>
+								<li><a href="https://busd-minter.finance" target="_blank">BUSD MINTER</a></li>
+								<li><a href="https://usdc-minter.finance" target="_blank">USDC MINTER</a></li>
+								<li><a href="https://dextoken-miner.finance" target="_blank">CAKE MINER</a></li>
+								<li><a href="https://doge-digger.finance" target="_blank">DOGE DIGGER</a></li>
+								<li><a href="https://mine-eth.finance" target="_blank">ETH MINER</a></li>
+
+
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-medium">
+
+								<!-- Sidebar -->
+									<section class="box">
+										<a href="#" class="image featured"><img id="miner_digging"  src="images/miner_digging.png" alt="miner_digging" /></a>
+										<header>
+											<h3>Your Miners</h3>
+										</header>
+										<p class="your-miners">
+											Right now you have <span class="num-miners">1,000,000</span> miners working for you</br></br>
+
+											Your miners are digging at <span id="production-rate">999,999,999</span> feet per hour
+									  </p>
+										<input class="form-control" id="eth-to-spend" onchange="updateBuyPrice()" step="1" type="number" value="500"><span class="matic-text">FTM</span>
+										<p class="your-miners" style="padding-top:10px">
+											hires <span id="eggs-to-buy-1">0</span> more miners
+									  </p>
+										<footer>
+											<a href="javascript:buyEggs2()" class="button alt">Hire <span id="eggs-to-buy-2">0</span> Miners</a>
+										</footer>
+									</section>
+									<section class="box">
+										<a href="#" class="image featured"><img id="gold_wagon" src="images/gold_wagons.png" alt="gold_wagons" /></a>
+										<header>
+											<h3>Your Fantom</h3>
+										</header>
+										<p class="your-miners">
+											Right now you have <span id="sell-price">0</span> FTM in your barrel</br></br>
+											Your barrel will be full in <span id="until-full">24 hrs</span>
+									  </p>
+										<footer>
+											<ul class="divided">
+												<li><a href="javascript:hatchEggs1()" class="button alt">Hire More Miners</a></li>
+											  <li><a href="javascript:sellEggs(displayTransactionMessage)" class="button alt">Pocket Your Fantom</a></li>
+								  		</ul>
+										</footer>
+									</section>
+									<section class="box">
+										<a href="#" class="image featured"><img id="gold_mine" src="images/gold_mine.png" alt="gold_mine" /></a>
+										<header>
+											<h3>The Mine</h3>
+										</header>
+										<p class="your-miners">
+											Contract balance: <span id="contract-balance">0 FTM</span>
+										</p>
+										<h3 id="ref-link-loc">Referral Link</h5>
+										<p>
+											</br>
+                      <textarea rows="4" cols="40" id="ref-link" style="padding-top:5px;padding-left:5px;padding-right:5px;display:block;font-size:1em"></textarea>
+										</p>
+									</section>
+
+							</div>
+							<div class="col-6 col-12-medium">
+
+								<!-- Content -->
+									<article class="box post">
+								    <section class="box" id="instructions">
+											<header>
+												<h3>Yield Mining Instructions</h3>
+											</header>
+												<ul class="divided">
+													<li>Hire Miners > Miners Mine Fantom > Compound Daily > Withdraw > Profit!</li>
+												</ul>
+												<ul>
+													<li>"Hire Miners" using Fantom.</li>
+													<li>Your miners will start digging, placing the Fantom they find into your barrel.</li>
+													<li>You can compound your earnings using the "Hire More Miners" button. This uses the
+														  Fantom in your barrel to increase your Fantom mining production rate.
+												  </li>
+													<li>Alternatively, you can withdraw the Fantom in your barrel using the "Pocket Your Fantom"
+														  button and your miners will begin filling your barrel again.
+													</li>
+												</ul>
+												<p>
+													Miners will continue filling your barrel with Fantom non-stop for up to 24 hours. After
+													24 hours your barrel will become full and potentially begin overflowing until you've used
+													the Fantom in your barrel by either hiring more miners or pocketing it. You can
+													hire more miners or pocket your Fantom at any time but it's recommended to do so at least
+													once every 24 hours.
+												</p>
+										</section>
+                    <section class="box">
+											<header>
+												<h3>DeFi Yield Mining</h3>
+											</header>
+											<p>
+                         This type of contract has been deployed on the Binance Smart Chain for many months, and has proven to be a huge success.
+												 <a href="https://bscscan.com/address/0xce93f9827813761665ce348e33768cb1875a9704" target="_blank">Check it out for yourself</a>.
+
+												 </br></br>
+												 <b style="font-size:1.1em">The return is 3% daily, which equates to 1,095% APY.</b>
+											</p>
+											<h5 style="font-size:1em">Fantom Yield Mining</h5>
+											<p>Fantom Yield Mining is for users who want long term profits and sustainability. It is not for people who
+												 want instant profits that ultimately cause loss for other users.
+											</p>
+											<p>Yield Mining is not to be confused with Yield Farming. Miners are not bought, they are hired and therefore
+												 cannot be sold. Once miners are hired they work for you forever, providing you Fantom earnings every
+												 day at a modest starting rate of 3%.
+											</p>
+											<p>
+                         Our algorithm allows every user to profit handsomely, no matter their Mining Strategy. It will not allow any
+												 single user to have an unfair advantage over other users. We believe it is a truly beautiful thing.
+											</p>
+											<h5 style="font-size:1em">Yield Mining Returns</h5>
+										  <p>
+												Fantom Miner gives users 3% daily return, according to the current mining efficiency rate. The mining efficiency rate
+												rises and falls as you and other users hire miners, compound earnings and pocket Fantom rewards.
+											</p>
+										</section>
+										<section class="box">
+											<header>
+												<h3>Yield Mining Tips</h3>
+											</header>
+											<p>
+												The best strategy for increasing your earnings is to hire more miners sooner and more often than other users. This in
+												turn rewards you with more Fantom at a faster rate.
+											</p>
+											<p>
+												Hiring more miners every day using your Fantom earnings will <b>3x</b>
+												(triple) the number of miners you have within 30 days or less:
+											</p><br/>
+											<a href="#" class="image featured"><img src="images/miner_growth.png" alt="" /></a>
+										</section>
+									 <section class="box">
+											<header>
+												<h3>Yield Mining Strategies</h3>
+											</header>
+                      <p>
+												 While the Fantom Miner algorithm makes sure that all users receive their fair share of rewards, it also favours
+												 its most supportive users through its compounding programme. Compounding can be done by clicking the "Hire More Miners"
+												 button.
+											</p>
+											   Strategies are personal, you either "Hire More Miners" every day, "Pocket Your Fantom" every day, or you do a healthy
+												 combination of both. In our opinion the best strategy is to compound on daily basis. Once you're happy with your daily,
+												 weekly or monthly results, take profits as often as you see fit and simply continue compounding the rest.
+											</p>
+											<p>Keep in mind that the 3% return is not constant, it will vary slightly based on a combination of factors, including
+												 your personal hiring, pocketing, compounding habits and the habits of the community as a whole. Your personal habits
+												 hold much more weight in regards to your overal personal returns. Also remember, just as that number can decrease it
+												 also increases based on a combination of those same habits.
+											</p>
+											<p>After hiring any number of miners, you will begin to see returns very close to the advertised 3% daily, this number
+												 will rise and fall based on the factors explained above. We will not attempt to share any exact numbers because the
+												 maths behind the contract is complicated. You can see the results in the earnings you receive for yourself.
+											</p>
+												 Fantom Miner is complete and 100% automated DeFi. No developer interaction is necessary to continue operating as
+												 intended.
+											</p>
+											</section>
+											<section class="box">
+											<header>
+												<h3>Contract Details</h3>
+											</header>
+                      <p>
+												 The contract is open source and visible on <a href="https://ftmscan.com/address/0x69e7d335e8da617e692d7379e03fef74ef295899">FTMScan</a>.
+												 It is rug free and immutable, meaning there are no functions that the dev can use to drain or change its
+												 operations.
+											</p>
+											<p>
+												 The probability of the Fantom Miner contract balance becoming zero is highly unlikely due to our 3% maximum daily
+												 return and considering that many users are regularly compounding their daily returns for larger future profits.
+											</p>
+											<h5 style="font-size:1em">Referrals</h5>
+											<p>
+											  Earn 10% of the FTM used to hire miners by anyone who starts mining using your <a href="#ref-link-loc">referral link</a>.
+											</p>
+											<h5 style="font-size:1em">Fees</h5>
+											<p>
+											  The only fee that users personally incur is their transaction gas fees, which only Fantom is almost 0. A 5%
+												development fee is paid to the developer but this fee is not paid by you as a user, this fee is paid to the
+												developer by the contract as a whole.
+											</p>
+									 </section>
+									</article>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Social and Reviews</h2>
+									</header>
+									<ul class="social">
+										<li><a class="icon brands fa-telegram" href="https://t.me/fantom_miner" target="_blank"><span class="label">Telegram</span></a></li>
+										<li><a class="icon brands fa-twitter" href="https://twitter.com/FtmMatic" target="_blank"><span class="label">Twitter</span></a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+							</div>
+							<div class="col-4 col-12-medium">
+							</div>
+							<div class="col-12">
+
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; FantomMiner. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/interface.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/web3.min.js"></script>
+			<script src="assets/js/main_matic_4.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+      <script>
+				const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+				function switchTheme(e) {
+						if (e.target.checked) {
+								document.getElementById("miner_digging").src = "images/miner_digging_dark.png"
+								document.getElementById("gold_wagon").src = "images/gold_wagons_dark.png"
+								document.getElementById("gold_mine").src = "images/gold_mine_dark.png"
+								document.documentElement.setAttribute('data-theme', 'dark');
+						}
+						else {
+								document.getElementById("miner_digging").src = "images/miner_digging.png"
+								document.getElementById("gold_wagon").src = "images/gold_wagons.png"
+								document.getElementById("gold_mine").src = "images/gold_mine.png"
+								document.documentElement.setAttribute('data-theme', 'light');
+						}
+				}
+
+				toggleSwitch.addEventListener('change', switchTheme, false);
+
+			</script>
+
+
+
+
+	</body>
+</html>

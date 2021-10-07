@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Hire Miners to earn CAKE" name="description">
+	<meta name="image" content="miner-og-image.png">
+	<!-- opengraph image -->
+	<meta property="og:image" content="miner-og-image.png">
+	<meta property="og:title" content="CAKE MINER">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Hire Miners to earn CAKE">
+	<meta property="og:url" content="index.html">
+	<!-- Twitter meta -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="index.html">
+	<meta name="twitter:title" content="CAKE MINER">
+	<meta name="twitter:description" content="Hire Miners to earn CAKE">
+	<meta name="twitter:image" content="miner-og-image.png">
+	<!-- favicon files -->
+	<!-- <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" /> -->
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<title>CAKE MINER</title>
+
+	<!-- styles -->
+	<link rel="stylesheet" href="css/index.min.css" />
+	<link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+
+    <div class="modal" id="myModal">
+		<div class="modal-content">
+		  <div id="modal-internal"></div>
+		</div>
+	  </div>
+  
+  
+	  <div class="custom-container">
+  
+		  <div class="tab-content" id="myTabContent">
+			<div
+			  class="tab-pane fade active in"
+			  role="tabpanel"
+			  id="home"
+			  aria-labelledby="bees-tab"
+			>
+  
+  
+			  <div class="content">
+  
+				  <div class="content-box">
+					  <div class="banner">
+						  <img src="images/banner.png" alt="banner">
+					  </div>
+	  
+	  
+					  <div class="spend-container purple-box">
+						  <img src="images/bg-spend-mobile.png" alt="prductionbg" class="purple-box-bg">
+	  
+						  <div class="spend-input-continer">
+							  <div>
+  
+								  <label for="approve">
+									  <p class="step">1. Enter bnb</p>
+									  <p class="desc">the amount you want to use <br/>and <b>click approve</b> below</p>
+								  </label>
+								<div class="spend-input">
+		  
+								  <input
+									class="form-control"
+									id="spend-allowance"
+									name="approve"
+									onchange=""
+									step="1000"
+									type="number"
+									value="500"
+								  />
+								</div>
+								
+								<div class="button-container">
+									<img src="images/button-yellow-mobile.png" alt="button-bg">
+									<button
+									  class="btn btn-lg btn-buy"
+									  onclick="approve()"
+									  role="button"
+									>
+									<span>Approve</span> 
+									</button>
+								</div>
+								  
+								<p id="spend-limit"></p>
+							  </div>
+	  
+							  <div>
+								  <label for="spend">
+									<p class="step">2. purchase</p>
+									<p class="desc">enter the bnb you want to use <br/>to <b>hire your miners</b></p>
+									</label>
+								  <div class="spend-input">
+									<input
+									  class="form-control"
+									  id="eth-to-spend"
+									  name="spend"
+									  onchange="updateBuyPrice()"
+									  step="100"
+									  type="number"
+									  value="50"
+									/>
+								  </div>
+									<div class="button-container">
+									<img src="images/button-yellow-mobile.png" alt="button-bg">
+  
+										<button
+										class="btn btn-lg btn-buy"
+										onclick="buyEggs2()"
+										role="button"
+										>
+										<span>
+											Hire <span id="eggs-to-buy-2">?</span> chikens
+										</span>
+										</button>
+									</div>
+							  </div>
+						  </div>
+	  
+  
+						</div>
+	  
+					  <div class="separator">
+						  <img src="images/arrow-right.png" alt="arrow-right">
+						  <p id="minibuy">
+							  0.01 BNB HIRES ? CHIKENS
+						  </p>
+						  <img src="images/arrow-left.png" alt="arrow-lef">
+					  </div>
+	  
+					<div class="production-produced-container purple-box">
+						<img src="images/bg-purple-box-mobile.png" alt="prductionbg" class="purple-box-bg">
+	  
+					  <div class="bees-tally-container">
+						  <h2 class="tally-text">
+							  chicken miners
+						  </h2>
+						  <div class="number-container">
+							  <img src="images/bg-number.png" alt="bgnumber">
+							  <span class="num-miners">0</span>
+						  </div>
+					  </div>
+	  
+						<div class="custom-row">
+						  <div class="dm-container-right bees-tally-container">
+							<h2 class="tally-text">mined eggs</h2>
+  
+							<div class="number-container">
+							  <img src="images/bg-number.png" alt="bgnumber">
+							  <span id="sell-price">?</span>
+							</div>
+						  </div>
+						</div>
+	  
+					  <div class="custom-row">
+						<div class="dm-container-right number-data">
+						  <h2>Production</h2>
+						  <p><span id="production-rate">0</span> feet per hour</p>
+						  <p><span id="until-full">?</span> until full</p>
+						</div>
+					  </div>
+	  
+					</div>
+				  </div>
+  
+  
+				  <div class="content-box">
+					  <div class="other-button-container">
+						  <img src="images/chickens.png" alt="chickens" class="buttons-chickens">
+						  <div class="button-container green">
+							  <button
+								class="btn btn-lg btn-hatch"
+								onclick="hatchEggs1()"
+								role="button"
+							  >
+								reinvest
+							  </button>
+						  </div>
+  
+						  <div class="button-container red">
+							  <button
+								class="btn btn-lg btn-sell"
+								onclick="sellEggs(displayTransactionMessage); document.getElementById('sellprice')"
+								role="button"
+							  >
+								Withdraw
+							  </button>
+						  </div>
+						</div>
+  
+						<div class="info-box">
+						  <div class="altcolor contract">
+							  <p>Contract balance : <span id="contract-balance">45.35</span> bnb</p>
+							  <p>Your balance : <span id="user-balance">0.5486</span> bnb</p>
+						  </div>
+  
+						  <div class="referals">
+							  <p>
+								  earn <span>10%</span> of what your referrals deposit using your link :
+							  </p>
+							  <div class="button-container">
+								<img src="images/button-yellow-mobile.png" alt="button-bg">
+								<button
+								  class="btn btn-lg btn-buy"
+								  onclick="coypyreferal()"
+								  role="button"
+								>
+								<span id="referalText">copy link</span> 
+								</button>
+							</div>
+						  </div>
+  
+						  <div class="social">
+							  <h2>
+								  for more information and help join to our community
+							  </h2>
+							  <div class="social-icons">
+								  <a href=""><img src="images/discord.png" alt=""></a>
+								  <a href=""><img src="images/telegram.png" alt=""></a>
+								  <a href=""><img src="images/bscan.png" alt=""></a>
+							  </div>
+						  </div>
+						</div>
+		  
+				  </div>
+			  </div>
+  
+			  <footer class="footer">
+				  <div class="instruction">
+					  <p class="title">
+						  Yield Production Instructions
+					  </p>
+					  <div class="details">
+						  <p>Approve BNB Spend > Buy Chickens > Chickens Mint BNB > Compound Daily > Withdraw > Profit!</p>
+						  <ul>
+							  <li>Choose how much BNB you want to spend and click "Approve Spend".</li>
+							  <li>"Buy Chickens" using BNB.</li>
+							  <li>Your Chickens will start production, placing the BNB they find into your briefcase.</li>
+							  <li>You can compound your earnings using the "Buy More Chickens" button. This uses the BNB in your briefcase to increase your BNB production production rate.</li>
+							  <li>Alternatively, you can withdraw the BNB in your briefcase using the "Withdraw Your BNB" button and your Chickens will begin filling your briefcase again.</li>
+						  </ul>
+						  <p>Chickens will continue filling your briefcase with BNB non-stop for up to 24 hours. After 24 hours your briefcase will become full and potentially begin overflowing until you've used the BNB in your briefcase by either hiring more Chickens or withdrawing it. You can Buy More Chickens or withdraw your BNB at any time but it's recommended to do so at least once every 24 hours.</p>
+					  </div>
+				  </div>
+  
+				  <div class="instruction">
+					  <p class="title">
+						  DeFi Yield Production
+					  </p>
+					  <div class="details">
+						  <p>The return is 10% daily, which equates to 3,650% APR.</p>
+					  </div>
+				  </div>
+  
+				  <div class="instruction">
+					  <p class="title">
+						  BNB Yield Production
+					  </p>
+					  <div class="details">
+						  <p>
+							  BNB Yield Production is for users who want long term profits and sustainability. It is not for people who want instant profits that ultimately cause loss for other users.
+						  </p>
+						  <p>
+							  Yield Production is not to be confused with Yield Farming. Chickens are not bought, they are buyed and therefore cannot be sold. Once Chickens are Buyd they work for you forever, providing you BNB earnings every day at a modest starting rate of 10%.
+						  </p>
+						  <p>
+							  Our algorithm allows every user to profit handsomely, no matter their Production Strategy. It will not allow any single user to have an unfair advantage over other users. We believe it is a truly beautiful thing.
+						  </p>
+					  </div>
+				  </div>
+  
+				  <div class="instruction">
+					  <p class="title">Yield Production Returns</p>
+					  <div class="details">
+						  <p>
+							  BNB Bee Game gives users 10% daily return, according to the current production efficiency rate. The production efficiency rate rises and falls as you and other users Buy Chickens, compound earnings and withdraw BNB rewards.
+						  </p>
+					  </div>
+				  </div>
+  
+				  <div class="instruction">
+					  <p class="title">
+						  Yield Production Tips
+					  </p>
+					  <div class="details">
+						  <p>
+							  The best strategy for increasing your earnings is to Buy More Chickens sooner and more often than other users. This in turn rewards you with more BNB at a faster rate.
+						  </p>
+						  <p>
+							  Hiring more Chickens every day using your BNB earnings will 3x (triple) the number of Chickens you have within 30 days or less:
+						  </p>
+					  </div>
+				  </div>
+  
+				  <div class="instruction">
+					  <p class="title">
+						  Yield Production Strategies
+					  </p>
+					  <div class="details">
+						  <P>
+							  While the BNB chicken Game algorithm makes sure that all users receive their fair share of rewards, it also favours its most supportive users through its compounding programme. Compounding can be done by clicking the "Buy More chickens" button.
+						  </P>
+						  <P>
+							  Strategies are personal, you either "Buy More chickens" every day, "Withdraw Your BNB" every day, or you do a healthy combination of both. In our opinion the best strategy is to compound on daily basis. Once you're happy with your daily, weekly or monthly results, take profits as often as you see fit and simply continue compounding the rest.
+						  </P>
+						  <P>
+							  Keep in mind that the 10% return is not constant, it will vary slightly based on a combination of factors, including your personal hiring, withdrawing, compounding habits and the habits of the community as a whole. Your personal habits hold much more weight in regards to your overal personal returns. Also remember, just as that number can decrease it also increases based on a combination of those same habits.
+						  </P>
+						  <P>
+							  After hiring any number of chickens, you will begin to see returns very close to the advertised 10% daily, this number will rise and fall based on the factors explained above. We will not attempt to share any exact numbers because the maths behind the contract is complicated. You can see the results in the earnings you receive for yourself.
+						  </P>
+						  <P>
+							  BNB chicken Game is complete and 100% automated DeFi. No developer interaction is necessary to continue operating as intended.
+						  </P>
+					  </div>
+				  </div>
+			  </footer>
+  
+  
+			</div>
+		  </div>
+			<!-- scripts -->
+			 <script src="assets/js/jquery.min.js"></script>
+			 <script src="assets/js/jquery.dropotron.min.js"></script>
+			 <script src="assets/js/browser.min.js"></script>
+			 <script src="assets/js/breakpoints.min.js"></script>
+			 <script src="assets/js/util.js"></script>
+			 <script src="assets/js/interface.js"></script>
+			<script src="assets/js/main.js"></script>
+			 <script src="assets/js/web3.min.js"></script>
+			 <script src="assets/js/main_eth.js"></script>
+			 <script src="ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script> 
+
+</div></div></body>
+</html>
